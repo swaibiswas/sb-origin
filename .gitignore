@@ -28,10 +28,10 @@ nodes
 # !cookbooks/chef_workstation
 
 # ##Chef
-# .kitchen/
-# .vagrant
-# nodes
-# metadata.json
+ .kitchen/
+ .vagrant
+ nodes
+ metadata.json
 
 # ##ruby
 # *.gem
