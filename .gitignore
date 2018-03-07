@@ -28,7 +28,8 @@ nodes
 # !cookbooks/chef_workstation
 
 # ##Chef
- .kitchen/
+ .kitchen/*
+ .kitchen
  .vagrant
  nodes
  metadata.json
