@@ -19,6 +19,10 @@ items.each do |itemx|
   end
 end
 
+search(:guestusers, "gid:guest*").each do |guestuser|
+  group guestuser['gid']
+end
+
 if node['platform'] == 'centos'
  if node['java']['jdk_version'] == 1.7
   Chef::Log.info('***** in 1.7')
