@@ -26,5 +26,5 @@ suites:
       - recipe[manage_users::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - test/integration/default/
     attributes:

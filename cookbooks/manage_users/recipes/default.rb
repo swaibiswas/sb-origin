@@ -20,5 +20,15 @@ items.each do |itemx|
 end
 
 if node['platform'] == 'centos'
- #do something
+ if node['java']['jdk_version'] == 1.7
+  Chef::Log.info('***** in 1.7')
+ elsif node['java']['jdk_version'] == 1.6
+  Chef::Log.info('***** in 1.6')
+ end
+end
+
+directory '/var/swati'
+
+file '/var/swati/myfile.txt' do
+  content "#{node['java']['jdk_version']}"
 end
