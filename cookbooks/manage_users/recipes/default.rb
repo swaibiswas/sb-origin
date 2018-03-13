@@ -30,5 +30,12 @@ end
 directory '/var/swati'
 
 file '/var/swati/myfile.txt' do
-  content "#{node['java']['jdk_version']}"
+  content "#{node['java']['jdk_version']} #{node['platform']}"
+end
+
+template '/var/swati/myfile2.txt' do
+  source 'myfile.txt.erb'
+  variables ({
+    :thisisavariable => 'varValue'
+  })
 end

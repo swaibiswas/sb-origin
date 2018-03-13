@@ -1,0 +1,9 @@
+{
+  "name": "development",
+  "description": "development environment",
+  "default_attributes": {
+    "java": {
+      "jdk_version": "8"
+    }
+  }
+}
