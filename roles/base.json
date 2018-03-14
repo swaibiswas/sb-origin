@@ -1,0 +1,12 @@
+{
+  "name": "base",
+  "default_attributes": {
+    "chef_client": {
+      "interval": 3600,
+      "splay": 1800
+    }
+  },
+  "run_list": [
+    "recipe[chef-client]"
+  ]
+}

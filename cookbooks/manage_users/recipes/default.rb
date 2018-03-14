@@ -51,3 +51,4 @@ myfile2_r "customer_resource" do
   greeting 'Hello'
   varvalue 'variable value'
 end
+
