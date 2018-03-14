@@ -1,0 +1,16 @@
+resource_name :myfile2_r
+property :varvalue, :kind_of => String
+property :greeting, :kind_of => String
+
+action :create do
+  directory '/var/swati'
+  file '/var/swati/myfile.txt' do
+    content "#{node['java']['jdk_version']} #{node['platform']} #{greeting}"
+  end
+  template '/var/swati/myfile2.txt' do
+    source 'myfile.txt.erb'
+    variables ({
+      :thisisavariable => varvalue
+    })
+  end
+end

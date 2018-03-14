@@ -31,6 +31,7 @@ if node['platform'] == 'centos'
  end
 end
 
+=begin
 directory '/var/swati'
 
 file '/var/swati/myfile.txt' do
@@ -42,4 +43,11 @@ template '/var/swati/myfile2.txt' do
   variables ({
     :thisisavariable => 'varValue'
   })
+end
+=end
+
+myfile2_r "customer_resource" do
+  action :create
+  greeting 'Hello'
+  varvalue 'variable value'
 end
